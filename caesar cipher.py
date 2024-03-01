@@ -52,6 +52,8 @@ while play_again:
                         # if the user wants to decode use this.
                         elif direction == "decode":
                             shifted_position = position - new_shift
+
+                            # if the shift is less 0 loop to the end.
                             if shifted_position < 0:
                                 shifted_position += 26
                         
