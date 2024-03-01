@@ -65,7 +65,7 @@ while play_again:
                         shifted_text += i
                     
                 # print the final output.
-                print(f"The {direction}d text is {shifted_text}.")
+                print(f"The {direction}d text is '{shifted_text}'.")
             
             # calling the function.
             caesar(text,shift,direction)
@@ -82,6 +82,10 @@ while play_again:
     if play == "no":
         play_again == False
         print("Goodbye!")
+    elif play == "yes":
+        pass
     # if the user inputter a wrong parameter.
     else:
-        print("please enter a valid input.")
+        print("Please enter a valid input.")
+    
+    
