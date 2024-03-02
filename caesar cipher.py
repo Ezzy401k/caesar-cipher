@@ -7,7 +7,7 @@ print(art.logo)
 # looping parameter.
 play_again = True
 # if the looping parameter remains True after the run do it again.
-while play_again:
+while play_again == True:
     # Accept users input.
     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
     text = input("Type your message:\n").lower()
@@ -75,13 +75,15 @@ while play_again:
             print(f"The inputted text is {direction}, whicth is not accepted.\nplease enter a valid input.")
     else:
         print("please enter a number.")
+
     # ask the user if they want to go again.
     play = input("Type 'yes' if you want to go again. Otherwise type 'no'.\n").lower()
 
     # if the user wants to stop.
     if play == "no":
-        play_again == False
+        play_again = False
         print("Goodbye!")
+        input("Tap Enter to Exit!.")
     elif play == "yes":
         pass
     # if the user inputter a wrong parameter.
