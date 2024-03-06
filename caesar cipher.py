@@ -86,8 +86,10 @@ while play_again == True:
         input("Tap Enter to Exit!.")
     elif play == "yes":
         pass
-    # if the user inputter a wrong parameter.
+    # if the user inputted a wrong parameter.
     else:
         print("Please enter a valid input.")
+
+input("Tap Enter to Exit!")
     
     
