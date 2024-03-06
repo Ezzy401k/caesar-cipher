@@ -3,24 +3,8 @@ import alphabet
 
 letter = alphabet.alphabet
 
-print(art.logo)
-# looping parameter.
-play_again = True
-# if the looping parameter remains True after the run do it again.
-while play_again == True:
-    # Accept users input.
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = input("Type the shift number:\n")
-
-    # check if the user has inputted a number.
-    if shift.isnumeric() == True:
-        shift = int(shift)
-
-        # if the user input correctly continue else inform them.
-        if direction == "encode" or direction == "decode":
-            # defining a new function that dose the cipher.
-            def caesar(text,shift,direction):
+# defining a new function that dose the cipher.
+def caesar(text,shift,direction):
                 # create an empty string.
                 shifted_text = ""
             
@@ -68,11 +52,30 @@ while play_again == True:
                 print(f"The {direction}d text is '{shifted_text}'.")
             
             # calling the function.
+
+print(art.logo)
+# looping parameter.
+play_again = True
+# if the looping parameter remains True after the run do it again.
+while play_again == True:
+    # Accept users input.
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = input("Type the shift number:\n")
+
+    # check if the user has inputted a number.
+    if shift.isnumeric() == True:
+        shift = int(shift)
+
+        # if the user input correctly continue else inform them.
+        if direction == "encode" or direction == "decode":
+            
+            # calling the function.
             caesar(text,shift,direction)
 
         # if a wrong input is inputted show this.
         else: 
-            print(f"The inputted text is {direction}, whicth is not accepted.\nplease enter a valid input.")
+            print(f"The inputted mode is {direction}, whicth is not accepted.\nplease enter a valid input.")
     else:
         print("please enter a number.")
 
