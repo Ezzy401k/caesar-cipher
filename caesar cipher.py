@@ -51,7 +51,6 @@ def caesar(text,shift,direction):
                 # print the final output.
                 print(f"The {direction}d text is '{shifted_text}'.")
             
-            # calling the function.
 
 print(art.logo)
 # looping parameter.
